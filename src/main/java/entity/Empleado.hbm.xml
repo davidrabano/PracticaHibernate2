@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 22 oct 2021 20:42:37 by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="Empleado" table="empleado" catalog="empresa" optimistic-lock="version">
+        <id name="codigo" type="int">
+            <column name="codigo" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="50" not-null="true" />
+        </property>
+        <property name="apellido1" type="string">
+            <column name="apellido1" length="50" not-null="true" />
+        </property>
+        <property name="apellido2" type="string">
+            <column name="apellido2" length="50" not-null="true" />
+        </property>
+        <property name="lugarNacimiento" type="string">
+            <column name="lugar_nacimiento" length="50" not-null="true" />
+        </property>
+        <property name="fechaNacimiento" type="string">
+            <column name="fecha_nacimiento" length="8" not-null="true" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="100" not-null="true" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="10" not-null="true" />
+        </property>
+        <property name="puesto" type="string">
+            <column name="puesto" length="15" not-null="true" />
+        </property>
+        <property name="codDepartamento" type="int">
+            <column name="cod_departamento" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
